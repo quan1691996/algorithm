@@ -5,7 +5,7 @@ Max_heap
 import unittest
 from typing import TypeVar
 
-from abstract_heap import AbstractHeap
+from data_structure.heap.abstract_heap import AbstractHeap
 
 T = TypeVar('T')
 
