@@ -3,7 +3,7 @@ BFS search
 """
 import unittest
 
-def BFS(graph: dict, node: str):
+def BFS(graph: dict, node: str) -> list:
     visited = []
     queue = []
 
@@ -19,7 +19,7 @@ def BFS(graph: dict, node: str):
                 queue.append(neighbour)
     return visited
 
-def BFS_SP(graph, start_node, target_node):
+def BFS_SP(graph, start_node, target_node) -> list:
     # Set of visited nodes to prevent loops
     visited = []
     queue = []
