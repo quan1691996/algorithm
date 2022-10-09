@@ -36,13 +36,13 @@ class TestDFSSearch(unittest.TestCase):
             '8' : []
         }
         self.graph1 = {
+            '6' : [],
             '0' : [],
             '1' : [],
             '2' : ['3'],
             '3' : ['1'],
             '4' : ['0', '1'],
             '5' : ['2','0']
-            '6' : []
         }
 
 
@@ -53,7 +53,7 @@ class TestDFSSearch(unittest.TestCase):
 
     def test_handles_topologicalSort(self):
         self.assertEqual(topologicalSort(self.graph), ['5', '7', '3', '4', '8', '2'])
-        self.assertEqual(topologicalSort(self.graph1), ['5', '4', '2', '3', '1', '0', '6'])
+        self.assertEqual(topologicalSort(self.graph1), ['5', '4', '2', '3', '1', '0','6'])
 
 if __name__ == "__main__":
     unittest.main()
