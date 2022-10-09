@@ -16,7 +16,7 @@ def binary_search(sorted_array: list, key: Any, lo: int, hi: int) -> int:
     return binary_search(sorted_array, key, mi+1, hi)
 
 
-class TestLinearSearch(unittest.TestCase):
+class TestBinarySearch(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.integers = [2, 3, 5, 6, 8, 9, 10, 22, 26, 32, 40]
