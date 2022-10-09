@@ -3,7 +3,7 @@ BFS search
 """
 import unittest
 
-def BFS(graph: dict, node: str) -> list:
+def bfs(graph: dict, node: str) -> list:
     visited = []
     queue = []
 
@@ -19,7 +19,7 @@ def BFS(graph: dict, node: str) -> list:
                 queue.append(neighbour)
     return visited
 
-def BFS_SP(graph, start_node, target_node) -> list:
+def bfs_sp(graph, start_node, target_node) -> list:
     # Set of visited nodes to prevent loops
     visited = []
     queue = []
@@ -69,17 +69,17 @@ class TestBFSSearch(unittest.TestCase):
         }
 
     def test_handles_visited_node(self):
-        self.assertEqual(BFS(self.graph, '5'), ['5', '3', '7', '2', '4', '8'])
+        self.assertEqual(bfs(self.graph, '5'), ['5', '3', '7', '2', '4', '8'])
 
     def test_handles_unvisited_node(self):
-        self.assertEqual(BFS(self.graph, '2'), ['2'])
+        self.assertEqual(bfs(self.graph, '2'), ['2'])
 
     def test_handles_BFS_SP(self):
-        self.assertEqual(BFS_SP(self.graph, '5', '2'), ['5', '3', '2'])
-        self.assertEqual(BFS_SP(self.graph, '3', '8'), ['3', '4', '8'])
-        self.assertEqual(BFS_SP(self.graph, '7', '8'), ['7', '8'])
-        self.assertEqual(BFS_SP(self.graph, '7', '4'), [])
-        self.assertEqual(BFS_SP(self.graph, '2', '4'), [])
+        self.assertEqual(bfs_sp(self.graph, '5', '2'), ['5', '3', '2'])
+        self.assertEqual(bfs_sp(self.graph, '3', '8'), ['3', '4', '8'])
+        self.assertEqual(bfs_sp(self.graph, '7', '8'), ['7', '8'])
+        self.assertEqual(bfs_sp(self.graph, '7', '4'), [])
+        self.assertEqual(bfs_sp(self.graph, '2', '4'), [])
 
 if __name__ == "__main__":
     unittest.main()
