@@ -3,7 +3,7 @@ Heap Sort
 """
 import unittest
 
-from algorithm.data_structure.heap.max_heap import MaxHeap
+from data_structure.heap.max_heap import MaxHeap
 
 
 def heap_sort(array: list):
