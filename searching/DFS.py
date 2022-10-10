@@ -4,7 +4,7 @@ DFS search
 import unittest
 from typing import Any
 
-def dfs(graph:dict , node: Any, stack: list, visited: list = None):  #function for dfs 
+def dfs(graph:dict , node: Any, stack: list, visited: list = None) -> list:  #function for dfs 
     if visited is None:
         visited = []
     if node not in visited:
@@ -14,7 +14,7 @@ def dfs(graph:dict , node: Any, stack: list, visited: list = None):  #function f
         stack.append(node)
     return visited
 
-def topologicalSort(graph):
+def topologicalSort(graph: dict) -> list:
     visited = []
     stack = []
 
